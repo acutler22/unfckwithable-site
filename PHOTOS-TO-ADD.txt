@@ -1,0 +1,32 @@
+PHOTOS TO ADD (optional, but recommended for the full look)
+===========================================================
+
+The site works and looks complete right now. Wherever a photo is
+missing, it shows a warm gradient tile instead of a broken image,
+so nothing looks off. To swap in your real brand photos, drop the
+files below into the folders shown, using these EXACT file names.
+
+These come from your approved photo library (the 15 vetted photos).
+
+INTO  /photos/approved/
+----------------------
+beige-blazer.jpg          -> Ali in the beige/olive blazer (Authority Accelerator hero)
+emerald-green-kids.jpg    -> Ali in the emerald green dress with her two kids (homepage "Meet Ali")
+ivory-pinstripe.jpg       -> Ali in the ivory pinstripe suit (homepage methodology, read 1)
+black-bustier-stairs.jpg  -> Ali in the black bustier on pine stairs (homepage methodology, read 2)
+denim-boots-studio.jpg    -> Ali in denim shirt + boots, studio (homepage methodology, read 3)
+
+ALREADY INCLUDED (no action needed)
+-----------------------------------
+/photos/cutouts/desert-mom-baby-hero.webp      -> homepage hero (already wired in)
+/photos/cutouts/peach-feather-venice-cutout.png-> about page hero (already wired in)
+
+OPTIONAL: social share images (1200 x 630) INTO /og/
+----------------------------------------------------
+home.jpg     -> shows when the homepage is shared on social / iMessage
+about.jpg    -> shows when /about is shared
+program.jpg  -> shows when /authority-accelerator is shared
+(If you skip these, links still work; they just won't show a preview image.)
+
+That's it. Add a photo, save, and it appears on the site the next
+time it deploys. You do not need to touch any code.
