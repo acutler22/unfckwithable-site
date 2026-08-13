@@ -114,8 +114,8 @@ section{padding:72px 0}
 .wins3{display:grid;grid-template-columns:1fr;gap:24px}
 @media(min-width:820px){.wins3{grid-template-columns:repeat(3,1fr)}}
 .wincard{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 1px 0 var(--edge),0 18px 40px -28px rgba(20,20,19,.4);display:flex;flex-direction:column}
-.wincard .media{position:relative;width:100%;aspect-ratio:16/9;background:var(--grad);overflow:hidden;cursor:pointer}
-.wincard .media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.wincard .media{position:relative;width:100%;aspect-ratio:16/9;background:var(--grad);overflow:hidden;cursor:pointer;border:0;padding:0;display:block}
+.wincard .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .wincard .body{padding:20px 22px 24px}
 .wincard .who{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--terracotta)}
 .wincard h3{font-size:24px;margin:6px 0 12px}
@@ -129,10 +129,21 @@ section{padding:72px 0}
 @media(min-width:640px){.masonry{column-count:2}}
 @media(min-width:980px){.masonry{column-count:3}}
 .vcard{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;display:inline-block;width:100%;margin:0 0 30px;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 1px 0 var(--edge),0 18px 40px -28px rgba(20,20,19,.4)}
-.vcard .media{position:relative;width:100%;background:var(--grad);overflow:hidden}
-.vcard .media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.vcard .media.pending{display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;aspect-ratio:16/9}
-.vcard .media.pending .pname{font-family:'Cormorant Infant',serif;font-size:36px;font-weight:600;text-shadow:0 2px 14px rgba(0,0,0,.28)}
+.vcard .media{position:relative;width:100%;aspect-ratio:16/9;background:var(--grad);overflow:hidden;cursor:pointer;border:0;padding:0;display:block}
+.vcard .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+/* play button + duration + lightbox (shared) */
+.vplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px -6px rgba(20,20,19,.55);transition:transform .2s,background .2s;z-index:2}
+.media:hover .vplay{transform:translate(-50%,-50%) scale(1.08);background:#fff}
+.vplay::after{content:"";width:0;height:0;border-left:18px solid var(--coral);border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+.vdur{position:absolute;right:12px;bottom:12px;background:rgba(20,20,19,.78);color:#fff;font-size:12px;font-weight:600;padding:4px 9px;border-radius:6px;z-index:2}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(20,20,19,.88);display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.lb.open{display:flex}
+.lb-inner{position:relative;width:100%;max-width:min(92vw,900px)}
+.lb-inner.portrait{max-width:min(92vw,460px)}
+.lb-frame{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:12px;overflow:hidden}
+.lb-frame.portrait{padding-top:177.78%}
+.lb-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.lb-close{position:absolute;top:-46px;right:0;background:none;border:0;color:#fff;font-size:32px;cursor:pointer;line-height:1}
 .ribbon{position:absolute;left:14px;top:14px;background:var(--plum);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:6px;z-index:2}
 .vcard .body{padding:20px 22px 24px}
 .vcard .name{font-family:'Cormorant Infant',serif;font-size:27px;font-weight:600;line-height:1}
